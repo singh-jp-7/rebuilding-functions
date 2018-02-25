@@ -1,7 +1,9 @@
-def is_even(n):
-	n = str(n)
-	if int(n[-1]) in [0,2,4,6,8]:
-		return True
-	else:
-		return False
+def fib(n):
+	if n == 1 or n == 2:
+		return 1
+	index = [0] * n
+	index[0],index[1] = 1,1
+	for i in range(2,n):	
+		index[i] = index[i-1] + index[i-2]
+	return index[n-1]
 
